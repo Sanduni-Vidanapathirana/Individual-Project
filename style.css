@@ -11,16 +11,16 @@
 }
 :root{
      --main-color:#bc9667;
-     --secondary-color:red;
-     --text-color:#10100f;
+     --secondary-color:rgb(81, 36, 36);
+     --text-color:#ead10f;
      --bg-color:#fff; 
-     
-     --box-shadow:2px 2px 10px 14px rgb(14 55 54 /15%);
-
-    
 }
+section{
+    padding:  50px 100px;
+}
+
 img{
-    width: 20%;
+    width: 100%;
 }
 body{
     color:var(--text-color);
@@ -36,9 +36,8 @@ header{
     align-items: center;
     border: 1px solid black;
     padding: 18px 100px;
-    background: var(--text-color);
+    background: var(--secondary-color);
     transition: 0.5s linear;
-
 }
 .logo img{
     width: 60px;
@@ -47,7 +46,7 @@ header{
     display: flex;
 }
 .navbar a{
-    padding: 10px 17px;
+    padding: 10px 35px;
     color: var(--bg-color);
     font-size: 1.5rem;
     text-transform:uppercase;
@@ -62,5 +61,73 @@ header{
     transition-timing-function: linear;
    
 }
+.container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    
+}
+.content{
+    width: 100%;
+    position:absolute;
+    top:95%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: rgb(253, 253, 253);
+
+}
+
+.img-container{
+    width: 100%;
+    display: flex;
+    animation-name: slide;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+}
+.img-container img{
+    width: 100%;
+    height: 100vh;
+}
+.Home{
+    width:100%;
+    min-height: 100vh;
+    background-color: #bc9667;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
+    text-align: center;
+    gap:1.5rem;
+ 
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform:translateY(-90%) ;
+    text-align: left;
+
+}
+.content font{
+    font-size: 70px;
+    margin-top: 20px;
+}
+@keyframes slide{
+    0%,100%{
+        transform: translateX(0);
+
+    }
+    25%{
+        transform: translateX(-25%);
+    }
+    50%{
+        transform: translateX(-50%);
+
+    }
+    75%{
+        transform: translateX(-75%);
+    }
+}
+
 
 
